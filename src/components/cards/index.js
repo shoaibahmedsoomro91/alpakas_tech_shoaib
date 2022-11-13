@@ -33,20 +33,21 @@ export default function MediaCard({ index, content }) {
     });
   }
   return (
-    <Card className={classes.gridItem} onClick={handleClick}>
+    <Card className={classes.gridItem} onClick={handleClick} role='media-card'>
       <CardActionArea>
         <CardMedia
+          role='media-image'
           className={classes.media}
           image= {content.sprites.front_default}
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="h6">
+          <Typography gutterBottom variant="h6" component="h6" role='card-heading'>
             { content.name }
           </Typography>          
           {
-            content.types.map((dt, index) => {
-                return <span key={index} style={{ paddingRight : 5 }}>{dt.name}</span>
+            content.types && content.types.length > 0 && content.types.map((dt, index) => {
+                return <span key={index} style={{ paddingRight : 5 }} role='card-footer-text'>{dt.name}</span>
             })
           }
         </CardContent>      
