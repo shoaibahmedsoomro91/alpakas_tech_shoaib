@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import PropTypes from "prop-types";
 import {
   InputLabel,
   Select,
@@ -15,20 +14,20 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default function Dropdown(props) {  
+export default function Dropdown({ label, actionType, items, handleOnChange}) {  
   const classes = useStyles();    
   const [ value, setValue ] = React.useState('')
   const handleChange = (event) => {
     const val = event.target.value;
     setValue(val);
-    props.handleOnChange(props.actionType, val)
+    handleOnChange(actionType, val)
   }
   return (
     <FormControl variant="standard" className={classes.formControl}>
-    <InputLabel id={`select-${props.label}-label`}>{props.label}</InputLabel>
+    <InputLabel id={`select-${label}-label`}>{label}</InputLabel>
     <Select        
         fullWidth
-        labelId={props.label}
+        labelId={label}
         id="select-type"
         variant={'standard'}
         label="Bucket"
@@ -36,7 +35,7 @@ export default function Dropdown(props) {
         value = {value}
     >
       {
-        props.items && props.items.map((item, index)=>{
+        items && items.map((item, index)=>{
           return <MenuItem key={index} value={item.name}>{item.name}</MenuItem>
         })
       }
@@ -44,9 +43,3 @@ export default function Dropdown(props) {
     </FormControl>
   )
 }
-Dropdown.propTypes = {
-  label: PropTypes.string,
-  handleOnChange: PropTypes.func,
-  actionType : PropTypes.string,
-  items : PropTypes.array
-};

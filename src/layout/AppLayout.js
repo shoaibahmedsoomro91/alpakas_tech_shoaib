@@ -1,11 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import BreadCrumb from './../components/breadcrumb';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 
@@ -42,7 +40,7 @@ export default function AppLayout(props) {
       <AppBar
         id = 'app-bar'
         position='fixed'
-        className={clsx(classes.appBar)}
+        className={classes.appBar}
         role = 'app-bar'
       >
         <Toolbar>        
@@ -53,8 +51,7 @@ export default function AppLayout(props) {
         </Toolbar>
       </AppBar>
       <Container role = 'app-container' className={classes.content} maxWidth = {false}>      
-        <div className={classes.toolbar} />
-        <BreadCrumb/>
+        <div className={classes.toolbar} />        
         {props.children}
       </Container>
     </div>
