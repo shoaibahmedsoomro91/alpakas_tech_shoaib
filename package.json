@@ -1,7 +1,7 @@
 {
   "name": "alpakas_tech_shoaib",
   "version": "0.1.1",
-  "homepage": "https://shoaibahmedsoomro91.github.io/alpakas_tech_shoaib/",
+  "homepage": ".",
   "private": true,
   "proxy": "http://localhost:5000/",
   "dependencies": {
