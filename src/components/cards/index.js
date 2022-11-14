@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   gridItem: {
     width: "100%",
     height: "100%"    
-  }
+  } 
 });
 
 export default function MediaCard({ index, content }) {

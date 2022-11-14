@@ -1,11 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { 
+  HashRouter as Router,
+  Switch, 
+  Route } from 'react-router-dom';
 import routes from '../config/routes'
 import ProtectedRoute from './ProtectedRoutes'
 
 function MainRouter({msalInstance}) {
   return (
-    <BrowserRouter>
+    <Router hashType="slash">
       <Switch>
         {routes.map(({
           component: Component,
@@ -28,7 +31,7 @@ function MainRouter({msalInstance}) {
         })
         }
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 }
 
