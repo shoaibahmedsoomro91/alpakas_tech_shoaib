@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/alpakas_tech_shoaib/static/css/main.8f274a90.chunk.css",
-    "main.js": "/alpakas_tech_shoaib/static/js/main.16cb6c82.chunk.js",
-    "main.js.map": "/alpakas_tech_shoaib/static/js/main.16cb6c82.chunk.js.map",
+    "main.js": "/alpakas_tech_shoaib/static/js/main.db05fbe8.chunk.js",
+    "main.js.map": "/alpakas_tech_shoaib/static/js/main.db05fbe8.chunk.js.map",
     "runtime-main.js": "/alpakas_tech_shoaib/static/js/runtime-main.31214b2e.js",
     "runtime-main.js.map": "/alpakas_tech_shoaib/static/js/runtime-main.31214b2e.js.map",
     "static/js/2.d8f119bc.chunk.js": "/alpakas_tech_shoaib/static/js/2.d8f119bc.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.31214b2e.js",
     "static/js/2.d8f119bc.chunk.js",
     "static/css/main.8f274a90.chunk.css",
-    "static/js/main.16cb6c82.chunk.js"
+    "static/js/main.db05fbe8.chunk.js"
   ]
 }
