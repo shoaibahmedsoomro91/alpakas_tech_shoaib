@@ -5,8 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
+import BackButton from '../components/back_button';
 import { useHistory } from 'react-router-dom';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -44,6 +44,7 @@ export default function AppLayout(props) {
         role = 'app-bar'
       >
         <Toolbar>        
+          <BackButton></BackButton>
           <Typography align='center' variant='h4' noWrap style={{ flexGrow: 6}}>
             My Pokemons
           </Typography>
